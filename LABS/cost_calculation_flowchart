@@ -1,0 +1,43 @@
+// Cost Calculation Flowchart
+digraph {
+	A [label="Start: Input 50,000 Cars (2027)"]
+	B [label="Gather Base Cost Data:
+• Direct Material
+• Factory Labor
+• HR & Admin
+• Logistics
+• S&M
+• CAPEX & Depreciation"]
+	C [label="Calculate Production Cost per Car
+(Material + Labor + HR & Admin)"]
+	D [label="Calculate Total Production Cost
+(Production Cost × 50,000)"]
+	E [label="Determine Inventory Requirements
+(10-day Safety Stock + Cycle Stock)"]
+	F [label="Compute Inventory Value
+(Average Inventory × Production Cost per Car)"]
+	G [label="Apply Holding Rate
+(Calculate Inventory Carrying Cost)"]
+	H [label="Compute Logistics Cost
+(Per Car Cost × 50,000)"]
+	I [label="Add S&M and Depreciation Costs"]
+	J [label="Sum All Components for Total Cost"]
+	K [label="Apply Synergy Discounts (if applicable):
+• Raw Material
+• Factory Labor
+• Logistics"]
+	L [label="Compare Total Costs Across Locations"]
+	M [label="Select Optimal Location"]
+	A -> B
+	B -> C
+	C -> D
+	D -> E
+	E -> F
+	F -> G
+	G -> H
+	H -> I
+	I -> J
+	J -> K
+	K -> L
+	L -> M
+}
